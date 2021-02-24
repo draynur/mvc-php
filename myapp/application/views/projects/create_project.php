@@ -1,95 +1,65 @@
-
 <h2>Create Project</h2>
 
-
-<?php $attributes = array('id'=>'create_form', 'class'=> 'form_horizontal'); ?>
+<?php $attributes = array('id' => 'create_form', 'class' => 'form_horizontal'); ?>
 
 <?php echo validation_errors("<p class='bg-danger'>"); ?>
 
-<?php echo form_open('projects/create', $attributes);?>
-
+<?php echo form_open('projects/create', $attributes); ?>
 
 <div class="form-group">
-	
-<?php echo form_label('Project Name'); ?>
 
+	<?php echo form_label('Project Name'); ?>
 
-<?php
+	<?php
 
-$data = array(
+	$data = array(
 
-	'class' => 'form-control',
-	'name' => 'project_name',
-	'placeholder' => 'Enter Project Name'
+		'class' => 'form-control',
+		'name' => 'project_name',
+		'placeholder' => 'Enter Project Name'
 
 	);
+	?>
 
-
- ?>
-
-
-
-<?php echo form_input($data); ?>
-
-
+	<?php echo form_input($data); ?>
 
 </div>
 
-
-
 <div class="form-group">
-	
-<?php echo form_label('Project Description'); ?>
 
+	<?php echo form_label('Project Description'); ?>
 
-<?php
+	<?php
 
-$data = array(
+	$data = array(
 
-	'class' => 'form-control',
-	'name' => 'project_body'
+		'class' => 'form-control',
+		'name' => 'project_body'
 
 	);
 
+	?>
 
- ?>
-
-
-
-<?php echo form_textarea($data); ?>
-
-
+	<?php echo form_textarea($data); ?>
 
 </div>
 
-
-
-
-
-
-
 <div class="form-group">
-	
 
-<?php
+	<?php
 
-$data = array(
+	$data = array(
 
-	'class' => 'btn btn-primary',
-	'name' => 'submit',
-	'value' => 'Create'
+		'class' => 'btn btn-primary',
+		'name' => 'submit',
+		'value' => 'Create'
 
 	);
 
+	?>
 
- ?>
-
-
-
-<?php echo form_submit($data); ?>
-
-
+	<?php echo form_submit($data); ?>
 
 </div>
 
-<?php echo form_close();?>
+<?php echo form_close(); ?>
